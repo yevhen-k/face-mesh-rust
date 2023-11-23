@@ -55,7 +55,8 @@ mod tests {
     fn prepare_graph_test() {
         unsafe {
             let pgraph = init_graph();
-            let calculator_graph_config_file = "./face_mesh_desktop_live.pbtxt";
+            let calculator_graph_config_file =
+                "thirdparty/mediapipe/graphs/face_mesh/face_mesh_desktop_live.pbtxt";
             let c_conf_path = CString::new(calculator_graph_config_file)
                 .expect("CString:: new failed")
                 .into_raw();

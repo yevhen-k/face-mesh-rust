@@ -49,6 +49,11 @@ To test FaceMesh on video and save result as a video:
 LD_LIBRARY_PATH=./lib/ cargo run --bin demo -- --calculator-graph-config-file=thirdparty/mediapipe/graphs/face_mesh/face_mesh_desktop_live.pbtxt --input-video-path=test.mp4 --output-video-path=out.mp4
 ```
 
+### Run Test
+```bash
+LD_LIBRARY_PATH=./lib cargo test
+```
+
 ## TODO
 1. Make static link with `fmesh` library.
 2. Make GPU-accelerated app.
