@@ -1,0 +1,24 @@
+[package]
+name = "face-mesh-rust"
+version = "0.1.0"
+authors = ["Yevhen Krasnokutsky <yevhen.krasnokutsky@gmail.com>"]
+edition = "2021"
+readme = "README.md"
+build = "build.rs"
+license = "MIT"
+description = "Rust Demo for Face Mesh Mediapipe"
+
+
+[lib]
+name = "fmeshrs"
+path = "src/lib.rs"
+
+
+[[bin]]
+name = "demo"
+path = "src/bin/main.rs"
+
+[dependencies]
+libc = "0.2.150"
+opencv = "0.86.1"
+clap = { version = "4.4.8", features = ["derive"] }
