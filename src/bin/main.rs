@@ -72,8 +72,6 @@ fn main() {
         None => ("".into(), false),
     };
 
-    println!("{output_video_path}, {save_video}");
-
     let kInputStream = "input_video";
     let kOutputStream = "output_video";
     let kWindowName = "MediaPipe";
@@ -129,7 +127,6 @@ fn main() {
                 println!("Empty frame, end of video reached.");
                 break;
             }
-            Ok(_) => {}
             _ => {}
         };
         _ = cvt_color(&camera_frame_raw, &mut camera_frame, COLOR_BGR2RGB, 0);
@@ -181,8 +178,7 @@ fn main() {
                             std::process::exit(-1);
                         });
                 }
-                Ok(_) => {}
-                Err(_) => {}
+                _ => {}
             }
             _ = writer.write(&output_frame);
         } else {
@@ -194,8 +190,6 @@ fn main() {
                 println!("quitting...");
                 break;
             }
-            Ok(-1) => (),
-            Ok(key) => println!("key pressed: {key}"),
             _ => (),
         }
     }

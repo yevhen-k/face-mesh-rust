@@ -58,7 +58,7 @@ mod tests {
             let calculator_graph_config_file =
                 "thirdparty/mediapipe/graphs/face_mesh/face_mesh_desktop_live.pbtxt";
             let c_conf_path = CString::new(calculator_graph_config_file)
-                .expect("CString:: new failed")
+                .expect("CString::new failed")
                 .into_raw();
             prepare_graph(pgraph, c_conf_path);
             delete_graph(pgraph);
