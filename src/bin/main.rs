@@ -47,7 +47,7 @@ fn prepare_capture(
         Ok(_) => (),
         Err(_) => {
             println!("Failed to open video capture");
-            std::process::exit(-1);
+            std::process::exit(1);
         }
     }
 
@@ -175,7 +175,7 @@ fn main() {
                         )
                         .unwrap_or_else(|_| {
                             println!("Failed to write to file. File closed.");
-                            std::process::exit(-1);
+                            std::process::exit(1);
                         });
                 }
                 _ => {}
