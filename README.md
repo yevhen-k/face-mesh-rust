@@ -2,6 +2,8 @@
 
 The repo demonstrates proof-of-concept of making shared library in Mediapipe (see [TODO](#TODO) section) and running Mediapipe apps with Rust.
 
+The repos is an adaptation of famous Mediapipe [FaceMesh example](https://github.com/google/mediapipe/tree/1c46e430883c56faefb8d829ad9f51cc94c25f5b/mediapipe/examples/desktop/face_mesh).
+
 ## Quick Start
 
 ### Requirements
